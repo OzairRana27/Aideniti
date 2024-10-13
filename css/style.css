@@ -259,27 +259,33 @@ textarea {
   color: #fff;}
   .ftco-section.ftco-slant,
   .ftco-footer.ftco-slant {
-    padding: 5em 0 0 0; }
+    padding: 5em 0 10em 0; }
   .ftco-section .ftco-title,
   .ftco-footer .ftco-title {
-    font-size: 64px;
+    font-size: 54px;
     font-weight: 900;
-    line-height: 1.5; 
+    line-height: 1.5;
+    color: #333; 
   }
   .ftco-section .ftco-heading,
   .ftco-footer .ftco-heading {
-    font-size: 54px;
+    font-size: 40px;
     font-weight: 700;
     line-height: 1.5; 
     color: #fff;
   }
   .ftco-section .description {
-    font-size: 24px;
-    color:#ddd;
+    font-size: 23px;
+    font-weight: 900;
+    color:#333;
   }
   @media screen and (max-width: 768px) {
     .ftco-section .ftco-heading,
     .ftco-footer .ftco-heading {
+      font-size: 30px; 
+    }
+    .ftco-section .ftco-title,
+    .ftco-footer .ftco-title {
       font-size: 30px; 
     }
     .ftco-section .description {
@@ -292,8 +298,10 @@ textarea {
 
   .feature-section {
     position: relative;
-    height: 650px;
+    height: 350px;
     overflow: hidden;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
   }
 
   .background-video {
@@ -304,6 +312,7 @@ textarea {
     height: 100%;
     object-fit: cover;
     z-index: 0;
+    border-radius: inherit;
   }
 
   .content-overlay {
@@ -311,7 +320,7 @@ textarea {
     z-index: 1;
     color: white;
     height: 100%;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.5);
   }
 
   @media (max-width: 768px) {
@@ -409,7 +418,7 @@ textarea {
       color: #4586FF; }
 
 .media .ftco-icon {
-  width: 100px; }
+  width: 100%; }
   .media .ftco-icon span {
     color: #4586FF; }
 
@@ -579,22 +588,3 @@ textarea {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
-    .carousel-indicators button {
-      width: 15px;
-      height: 15px; /* Make the height the same as width for perfect circles */
-      border-radius: 50%; /* Make the shape a circle */
-      background-color: #ccc; /* Change to your preferred background color for inactive bullets */
-      border: none; /* Remove any border */
-      opacity: 0.7;
-  }
-  
-  .carousel-indicators .active {
-      background-color: #111827; /* Change this to your preferred color for the active bullet */
-      opacity: 1;
-  }
-
-  .carousel-indicators {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-  }
