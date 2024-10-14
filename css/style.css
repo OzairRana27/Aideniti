@@ -255,7 +255,7 @@ textarea {
 
 .ftco-section,
 .ftco-footer {
-  padding: 7em 0 7em 0; 
+  padding: 5em 0 7em 0; 
   color: #fff;}
   .ftco-section.ftco-slant,
   .ftco-footer.ftco-slant {
@@ -275,9 +275,15 @@ textarea {
     color: #fff;
   }
   .ftco-section .description {
-    font-size: 23px;
+    font-size: 24px;
     font-weight: 900;
     color:#333;
+  }
+
+  .ftco-section .description-light {
+    font-size: 24px;
+    font-weight: 900;
+    color:#f2f2f2;
   }
   @media screen and (max-width: 768px) {
     .ftco-section .ftco-heading,
@@ -288,7 +294,8 @@ textarea {
     .ftco-footer .ftco-title {
       font-size: 30px; 
     }
-    .ftco-section .description {
+    .ftco-section .description, 
+    .ftco-section .description-light {
       font-size: 18px;
     }
   }
