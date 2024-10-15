@@ -274,6 +274,12 @@ textarea {
     line-height: 1.5; 
     color: #fff;
   }
+  .ftco-section .ftco-heading-dark {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #333;
+  }
   .ftco-section .description {
     font-size: 24px;
     font-weight: 900;
@@ -287,6 +293,7 @@ textarea {
   }
   @media screen and (max-width: 768px) {
     .ftco-section .ftco-heading,
+    .ftco-section .ftco-heading-dark,
     .ftco-footer .ftco-heading {
       font-size: 30px; 
     }
@@ -595,3 +602,58 @@ textarea {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+
+    
+.card-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow {
+  width: 40px;
+  height: 2px;
+  background-color: #333;
+  position: relative;
+  margin-right: 10px;
+}
+
+.arrow::after {
+    content: '';
+    position: absolute;
+    right: -10px;
+    top: -4px;
+    border-top: 5px solid transparent;
+    border-left: 10px solid #333;
+    border-bottom: 5px solid transparent;
+}
+
+/* Responsive Design for screens smaller than 768px */
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column; /* Stack the cards vertically */
+    }
+
+    .card {
+        width: 100%; /* Full width in portrait mode */
+        margin-bottom: 20px;
+    }
+
+    .arrow {
+        width: 2px; /* Vertical line */
+        height: 40px; /* Taller height for portrait mode */
+        margin: 15px 0;
+    }
+
+    .arrow::after {
+        content: '';
+        position: absolute;
+        right: auto;
+        left: -4px;
+        top: 100%;
+        border-left: 5px solid transparent;
+        border-top: 10px solid #333;
+        border-right: 5px solid transparent;
+        border-bottom: none;
+    }
+}
