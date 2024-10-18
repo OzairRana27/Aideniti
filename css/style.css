@@ -1,6 +1,9 @@
 html {
   overflow-x: hidden; }
-
+  :root {
+    --choose-us-color-1: #003F3F;
+    --choose-us-color-2: #001F3F;
+}
 body {
   font-family: "Raleway", sans-serif;
   line-height: 1.8;
@@ -265,7 +268,7 @@ textarea {
     font-size: 54px;
     font-weight: 900;
     line-height: 1.5;
-    color: #333; 
+    color: #fff; 
   }
   .ftco-section .ftco-heading,
   .ftco-footer .ftco-heading {
@@ -312,21 +315,22 @@ textarea {
 
   .feature-section {
     position: relative;
-    height: 350px;
+    height: 600px;
     overflow: hidden;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-radius: 15px;
   }
 
   .background-video {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
     object-fit: cover;
     z-index: 0;
-    border-radius: inherit;
+    width: 100%; /* Make image responsive */
+    height: 100%; /* Maintain aspect ratio */
+    border-radius: inherit !important; /* Optional: to soften corners */
   }
 
   .content-overlay {
@@ -334,7 +338,10 @@ textarea {
     z-index: 1;
     color: white;
     height: 100%;
+    width: 100%;
     background: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    padding: inherit;
   }
 
   @media (max-width: 768px) {
@@ -656,4 +663,264 @@ textarea {
         border-right: 5px solid transparent;
         border-bottom: none;
     }
+}
+
+@keyframes rotate-gradient {
+  0% {
+    background: linear-gradient(0deg, var(--choose-us-color-1), var(--choose-us-color-2));
+  }
+  2.5% {
+    background: linear-gradient(9deg,var(--choose-us-color-1), var(--choose-us-color-2));
+  }
+  5% {
+    background: linear-gradient(18deg,var(--choose-us-color-1), var(--choose-us-color-2));
+  }
+  7.5% {
+    background: linear-gradient(27deg,var(--choose-us-color-1), var(--choose-us-color-2));
+  }
+  10% {
+    background: linear-gradient(36deg,var(--choose-us-color-1), var(--choose-us-color-2));
+  }
+  12.5% {
+    background: linear-gradient(45deg,var(--choose-us-color-1), var(--choose-us-color-2));
+  }
+  15% {
+    background: linear-gradient(54deg,var(--choose-us-color-1), var(--choose-us-color-2));
+  }
+  17.5% {
+    background: linear-gradient(63deg,var(--choose-us-color-1), var(--choose-us-color-2));
+  }
+  20% {
+    background: linear-gradient(72deg,var(--choose-us-color-1), var(--choose-us-color-2));
+  }
+  22.5% {
+    background: linear-gradient(81deg,var(--choose-us-color-1), var(--choose-us-color-2));
+  }
+  25% {
+    background: linear-gradient(90deg,var(--choose-us-color-1), var(--choose-us-color-2));
+  }
+  27.5% {
+    background: linear-gradient(99deg,var(--choose-us-color-1), var(--choose-us-color-2));
+  }
+  30% {
+    background: linear-gradient(108deg,var(--choose-us-color-1), var(--choose-us-color-2));
+  }
+  32.5% {
+    background: linear-gradient(117deg,var(--choose-us-color-1), var(--choose-us-color-2));
+  }
+  35% {
+    background: linear-gradient(126deg,var(--choose-us-color-1), var(--choose-us-color-2));
+  }
+  37.5% {
+    background: linear-gradient(135deg,var(--choose-us-color-1), var(--choose-us-color-2));
+  }
+  40% {
+    background: linear-gradient(144deg,var(--choose-us-color-1), var(--choose-us-color-2));
+  }
+  42.5% {
+    background: linear-gradient(153deg,var(--choose-us-color-1), var(--choose-us-color-2));
+  }
+  45% {
+    background: linear-gradient(162deg,var(--choose-us-color-1), var(--choose-us-color-2));
+  }
+  47.5% {
+    background: linear-gradient(171deg,var(--choose-us-color-1), var(--choose-us-color-2));
+  }
+  50% {
+    background: linear-gradient(180deg,var(--choose-us-color-1), var(--choose-us-color-2));
+  }
+  52.5% {
+    background: linear-gradient(189deg,var(--choose-us-color-1), var(--choose-us-color-2));
+  }
+  55% {
+    background: linear-gradient(198deg,var(--choose-us-color-1), var(--choose-us-color-2));
+  }
+  57.5% {
+    background: linear-gradient(207deg,var(--choose-us-color-1), var(--choose-us-color-2));
+  }
+  60% {
+    background: linear-gradient(216deg,var(--choose-us-color-1), var(--choose-us-color-2));
+  }
+  62.5% {
+    background: linear-gradient(225deg,var(--choose-us-color-1), var(--choose-us-color-2));
+  }
+  65% {
+    background: linear-gradient(234deg,var(--choose-us-color-1), var(--choose-us-color-2));
+  }
+  67.5% {
+    background: linear-gradient(243deg,var(--choose-us-color-1), var(--choose-us-color-2));
+  }
+  70% {
+    background: linear-gradient(252deg,var(--choose-us-color-1), var(--choose-us-color-2));
+  }
+  72.5% {
+    background: linear-gradient(261deg,var(--choose-us-color-1), var(--choose-us-color-2));
+  }
+  75% {
+    background: linear-gradient(270deg,var(--choose-us-color-1), var(--choose-us-color-2));
+  }
+  77.5% {
+    background: linear-gradient(279deg,var(--choose-us-color-1), var(--choose-us-color-2));
+  }
+  80% {
+    background: linear-gradient(288deg,var(--choose-us-color-1), var(--choose-us-color-2));
+  }
+  82.5% {
+    background: linear-gradient(297deg,var(--choose-us-color-1), var(--choose-us-color-2));
+  }
+  85% {
+    background: linear-gradient(306deg,var(--choose-us-color-1), var(--choose-us-color-2));
+  }
+  87.5% {
+    background: linear-gradient(315deg,var(--choose-us-color-1), var(--choose-us-color-2));
+  }
+  90% {
+    background: linear-gradient(324deg,var(--choose-us-color-1), var(--choose-us-color-2));
+  }
+  92.5% {
+    background: linear-gradient(333deg,var(--choose-us-color-1), var(--choose-us-color-2));
+  }
+  95% {
+    background: linear-gradient(342deg,var(--choose-us-color-1), var(--choose-us-color-2));
+  }
+  97.5% {
+    background: linear-gradient(351deg,var(--choose-us-color-1), var(--choose-us-color-2));
+  }
+  100% {
+    background: linear-gradient(360deg,var(--choose-us-color-1), var(--choose-us-color-2));
+  }
+}
+
+#why-choose-us {
+  background: linear-gradient(135deg, #1f3b82, #3b6bb0);
+  color: white;
+  padding: 80px 0;
+  animation: rotate-gradient 2s linear infinite;
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Section Header */
+.section-header h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.section-header p {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+/* Features (What Sets Us Apart) */
+.features {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.feature {
+  text-align: center;
+  width: 30%;
+}
+
+.feature img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.feature h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.feature p {
+  font-size: 1rem;
+}
+
+.text-block {
+  width: 50%;
+}
+
+.text-block h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.text-block ul {
+  list-style: none;
+  font-size: 1.1rem;
+}
+
+.text-block li {
+  margin-bottom: 15px;
+}
+
+.infographic {
+  flex: 1;
+  margin-left: 20px; /* Space between text and infographic */
+  width: 50%;
+}
+
+.section-image {
+  width: 100%; /* Make image responsive */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Optional: to soften corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: to add depth */
+}
+
+/* Why Work With Us Section */
+.work-with-us {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.work-column {
+  width: 30%;
+  text-align: center;
+}
+
+.work-column img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.work-column h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.work-column p {
+  font-size: 1rem;
+}
+
+/* Call to Action */
+.cta {
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  background-color: #fff;
+  color: #1f3b82;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #3b6bb0;
+  color: #fff;
 }
