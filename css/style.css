@@ -3,7 +3,43 @@ html {
   :root {
     --choose-us-color-1: #003F3F;
     --choose-us-color-2: #001F3F;
+    --text-color: #fff;
+    --text-color-light: #e2e2e2;
+    --text-color-dark: #333333;
 }
+
+/* Style the scrollbar */
+::-webkit-scrollbar {
+  width: 6px; /* Set the width of the scrollbar */
+}
+
+/* Style the track (background) */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Light gray background */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Style the handle (thumb) */
+::-webkit-scrollbar-thumb {
+  background: #888; /* Darker gray for the thumb */
+  border-radius: 6px;
+}
+
+/* Hover effect for the thumb */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Darker gray on hover */
+}
+
+/* Optional: Style the scrollbar for horizontal scrolling */
+::-webkit-scrollbar-horizontal {
+  height: 8px; /* Set the height of the scrollbar */
+}
+
+/* Optional: Style for the corners of the scrollbar */
+::-webkit-scrollbar-corner {
+  background: transparent; /* Transparent corners */
+}
+
 body {
   font-family: "Raleway", sans-serif;
   line-height: 1.8;
@@ -259,40 +295,46 @@ textarea {
 .ftco-section,
 .ftco-footer {
   padding: 5em 0 7em 0; 
-  color: #fff;}
+  color: var(--text-color);}
   .ftco-section.ftco-slant,
   .ftco-footer.ftco-slant {
     padding: 5em 0 10em 0; }
+  /* Title */
   .ftco-section .ftco-title,
   .ftco-footer .ftco-title {
     font-size: 54px;
     font-weight: 900;
     line-height: 1.5;
-    color: #fff; 
+    color: var(--text-color); 
   }
+  /* Heading */
   .ftco-section .ftco-heading,
   .ftco-footer .ftco-heading {
     font-size: 40px;
     font-weight: 700;
     line-height: 1.5; 
-    color: #fff;
+    color: var(--text-color);
   }
   .ftco-section .ftco-heading-dark {
     font-size: 40px;
     font-weight: 700;
     line-height: 1.5;
-    color: #333;
+    color: var(--text-color-dark);
   }
+  /* Sub-heading */
+  .ftco-section .ftco-sub-heading {
+    font-size: 24px;
+    line-height: 1.5;
+    color: var(--text-color-light);
+  }
+  /* Description */
   .ftco-section .description {
-    font-size: 24px;
-    font-weight: 900;
-    color:#333;
+    font-size: 18px;
+    color: var(--text-color-light);
   }
-
-  .ftco-section .description-light {
-    font-size: 24px;
-    font-weight: 900;
-    color:#f2f2f2;
+  .ftco-section .description-dark {
+    font-size: 18px;
+    color:var(--text-color-dark);
   }
   @media screen and (max-width: 768px) {
     .ftco-section .ftco-heading,
@@ -304,9 +346,8 @@ textarea {
     .ftco-footer .ftco-title {
       font-size: 30px; 
     }
-    .ftco-section .description, 
-    .ftco-section .description-light {
-      font-size: 18px;
+    .ftco-section .ftco-sub-heading {
+      font-size: 20px;
     }
   }
   .ftco-section.bg-light,
@@ -315,10 +356,18 @@ textarea {
 
   .feature-section {
     position: relative;
-    height: 600px;
+    height: 650px;
     overflow: hidden;
     border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s; 
   }
+
+  .feature-section:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 1);
+    transition: box-shadow 0.3s;
+  }
+
 
   .background-video {
     position: absolute;
@@ -339,14 +388,14 @@ textarea {
     color: white;
     height: 100%;
     width: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.3);
     border-radius: 15px;
     padding: inherit;
   }
 
   @media (max-width: 768px) {
     .feature-section {
-      height: 300px;
+      height: 500px;
     }
   }
 
@@ -790,80 +839,60 @@ textarea {
     background: linear-gradient(360deg,var(--choose-us-color-1), var(--choose-us-color-2));
   }
 }
-
-#why-choose-us {
-  background: linear-gradient(135deg, #1f3b82, #3b6bb0);
-  color: white;
-  padding: 80px 0;
-  animation: rotate-gradient 2s linear infinite;
-}
 .container {
   width: 80%;
   margin: 0 auto;
 }
 
-/* Section Header */
-.section-header h1 {
-  font-size: 2.5rem;
-  text-align: center;
-  margin-bottom: 10px;
+#why-choose-us {
+  background: linear-gradient(135deg, #1f3b82, #3b6bb0);
+  color: white;
+  padding: 80px 0;
+  animation: rotate-gradient 3s linear infinite;
+}
+#why-choose-us .section-list {
+  list-style: none; /* Remove default bullet */
+  position: relative; /* Allow positioning of the custom icon */
+  padding-left: 40px; /* Space for the icon */
+  margin-bottom: 20px;
+}
+#why-choose-us .section-list::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 3px;
+  width: 32px; 
+  height: 32px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill=%22none%22 viewBox=%220 0 24 24%22 stroke=%22%234ade80%22><path d=%22M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z%22 stroke-width=%221.5%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22></path><path d=%22M7.75 12L10.58 14.83L16.25 9.17004%22 stroke-width=%221.5%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22></path></svg>');
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
-.section-header p {
-  text-align: center;
-  font-size: 1.2rem;
-  margin-bottom: 40px;
-}
-
-/* Features (What Sets Us Apart) */
-.features {
+#why-choose-us .features {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 50px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 100px;
 }
 
-.feature {
-  text-align: center;
-  width: 30%;
+#why-choose-us .main-highlights {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 100px;
 }
 
-.feature img {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 20px;
+.row-reverse {
+  flex-direction: row-reverse;
 }
 
-.feature h3 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-}
-
-.feature p {
-  font-size: 1rem;
-}
-
-.text-block {
-  width: 50%;
-}
-
-.text-block h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-.text-block ul {
-  list-style: none;
-  font-size: 1.1rem;
-}
-
-.text-block li {
-  margin-bottom: 15px;
-}
-
-.infographic {
-  flex: 1;
-  margin-left: 20px; /* Space between text and infographic */
-  width: 50%;
+@media (max-width: 768px) {
+  .features {
+    flex-direction: column;
+  }
+  .row-reverse {
+    flex-direction: column;
+  }
 }
 
 .section-image {
@@ -871,56 +900,9 @@ textarea {
   height: auto; /* Maintain aspect ratio */
   border-radius: 8px; /* Optional: to soften corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: to add depth */
+  transition: box-shadow 0.3s;
 }
-
-/* Why Work With Us Section */
-.work-with-us {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 50px;
-}
-
-.work-column {
-  width: 30%;
-  text-align: center;
-}
-
-.work-column img {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 20px;
-}
-
-.work-column h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.work-column p {
-  font-size: 1rem;
-}
-
-/* Call to Action */
-.cta {
-  text-align: center;
-}
-
-.cta h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-.cta-button {
-  background-color: #fff;
-  color: #1f3b82;
-  padding: 15px 30px;
-  text-decoration: none;
-  font-size: 1.1rem;
-  border-radius: 30px;
-  transition: background-color 0.3s;
-}
-
-.cta-button:hover {
-  background-color: #3b6bb0;
-  color: #fff;
+.section-image:hover{
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 1);
+  transition: box-shadow 0.3s;
 }
