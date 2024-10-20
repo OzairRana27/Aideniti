@@ -842,7 +842,7 @@ textarea {
   top: 3px;
   width: 32px; 
   height: 32px;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill=%22none%22 viewBox=%220 0 24 24%22 stroke=%22%234ade80%22><path d=%22M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z%22 stroke-width=%221.5%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22></path><path d=%22M7.75 12L10.58 14.83L16.25 9.17004%22 stroke-width=%221.5%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22></path></svg>');
+  background-image: url("/assets/tick.svg");
   background-size: contain;
   background-repeat: no-repeat;
 }
