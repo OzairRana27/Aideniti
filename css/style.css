@@ -294,7 +294,7 @@ textarea {
 
 .ftco-section,
 .ftco-footer {
-  padding: 5em 0 7em 0; 
+  padding: 0; 
   color: var(--text-color);}
   .ftco-section.ftco-slant,
   .ftco-footer.ftco-slant {
@@ -823,12 +823,13 @@ textarea {
   margin: 0 auto;
 }
 
-#why-choose-us {
+.section-container {
   background: linear-gradient(135deg, #1f3b82, #3b6bb0);
   color: white;
   padding: 80px 0;
   animation: rotate-gradient 3s linear infinite;
 }
+
 #why-choose-us .section-list {
   list-style: none; /* Remove default bullet */
   position: relative; /* Allow positioning of the custom icon */
@@ -900,54 +901,57 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-direction: column;
 }
 
 .step {
-  background: #fff;
+  background: transparent;
   border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  min-height: 300px;
-  width: 100%;
+  width: 40%;
   text-align: center;
+  transition: box-shadow 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  color: var(--text-color);
+}
+.step:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 1);
+  transition: box-shadow 0.3s;
+}
+
+.step-overlay {
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: box-shadow 0.3s;
-}
-.step:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  transition: box-shadow 0.3s;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  color: white;
+  min-height: 300px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 20px;
 }
 
 .step-description {
   font-size: 20px;
   line-height: 2;
-  color: var(--text-color-dark);
+  color: inherit;
 }
 
 .arrow {
   font-size: 2rem;
-  color: #0f172a;
-  margin: 0 20px;
+  color: #fff;
+  margin: 20px 0;
+  transform: rotate(90deg) !important;
 }
-@media (max-width: 1440px) {
-  .step {
-    height: 350px;
-    width: 100%;
-  }
-}
-@media (max-width: 1024px) {
-  .step {
-    height: fit-content;
+
+@media (max-width: 768px) {
+  .step{
     width: 100%;
   }
   .flowchart {
     flex-direction: column;
-  }
-  .arrow {
-    transform: rotate(90deg) !important;
-    margin: 20px 0;
   }
   .step-description {
     font-size: 18px;
