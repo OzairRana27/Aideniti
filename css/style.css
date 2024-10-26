@@ -982,6 +982,38 @@ textarea {
 #section-industries .section-image {
   height: 100%;
 }
+
+
+.skills-section {
+  margin: 50px 0;
+}
+
+.skills-slider {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.slider-content {
+  display: inline-flex;
+  animation: scroll 20s linear infinite;
+}
+
+.skills-slider img {
+  margin: 0 15px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Moves left by half the total width (half because of duplication) */
+  }
+}
+
+
 @media (max-width: 768px) {
   .step{
     width: 100%;
