@@ -975,6 +975,13 @@ textarea {
 .highlights:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 1);
 }
+
+#section-industries .features-section {
+  height: 250px;
+}
+#section-industries .section-image {
+  height: 100%;
+}
 @media (max-width: 768px) {
   .step{
     width: 100%;
@@ -987,5 +994,9 @@ textarea {
   }
   #section-services .main-highlights .highlights {
     height: 100%;
+  }
+  .column-reverse {
+    display: flex;
+    flex-direction: column-reverse;
   }
 }
