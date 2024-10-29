@@ -251,6 +251,17 @@ h1, h2, h3, h4, h5,
     background: #fff;
     color: #263135 !important;
   }
+
+  .btn.btn-primary-dark {
+    background: none;
+    border-color: #000;
+    color: #000 !important;
+  }
+  .btn.btn-primary-dark:hover, .btn.btn-primary-dark:focus, .btn.btn-primary-dark:active {
+    border-color: #000;
+    background: #000;
+    color: #fff !important;
+  }
   .btn.btn-outline-white {
     border-color: rgba(255, 255, 255, 0.2);
     background: none; }
@@ -294,10 +305,12 @@ textarea {
 .bg-primary {
   background: #4586FF !important; }
 
-.ftco-section,
-.ftco-footer {
+.ftco-section {
   padding-top: 80px; 
   color: var(--text-color);}
+.ftco-footer {
+  padding-top: 50px; 
+  color: var(--text-color-dark);}
   .ftco-section.ftco-slant,
   .ftco-footer.ftco-slant {
     padding: 5em 0 10em 0; }
@@ -309,7 +322,8 @@ textarea {
     line-height: 1.5;
     color: var(--text-color); 
   }
-  .ftco-section .ftco-title-dark{
+  .ftco-section .ftco-title-dark,
+  .ftco-footer .ftco-title-dark{
     font-size: 54px;
     font-weight: 900;
     line-height: 1.5;
@@ -348,7 +362,8 @@ textarea {
     font-size: 18px;
     color: var(--text-color-light);
   }
-  .ftco-section .description-dark {
+  .ftco-section .description-dark,
+  .ftco-footer .description-dark {
     font-size: 18px;
     color:var(--text-color-dark);
   }
@@ -360,7 +375,8 @@ textarea {
     }
     .ftco-section .ftco-title,
     .ftco-section .ftco-title-dark,
-    .ftco-footer .ftco-title {
+    .ftco-footer .ftco-title,
+    .ftco-footer .ftco-title-dark {
       font-size: 30px; 
     }
     .ftco-section .ftco-sub-heading,
