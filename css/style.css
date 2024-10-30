@@ -871,17 +871,16 @@ textarea {
   background-repeat: no-repeat;
 }
 
-.features .description {
-  font-size: 24px;
-  line-height: 1.5;
-  color: var(--text-color-light);
-}
-
 .features {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 100px;
+}
+
+.features ul {
+  padding-left: 0;
+  padding-right: 15px;
 }
 
 #why-choose-us .main-highlights {
@@ -895,13 +894,31 @@ textarea {
   flex-direction: row-reverse;
 }
 
+.row-reverse ul {
+  padding-left: 20px;
+  padding-right: 0;
+}
+
 @media (max-width: 768px) {
   .features {
     flex-direction: column;
   }
+
+  .features .points {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   .row-reverse {
     flex-direction: column;
   }
+
+  .row-reverse ul {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   #why-choose-us .section-list .description{
     font-size: 18px;
   }
