@@ -433,7 +433,7 @@ textarea {
   .ftco-footer.bg-light {
     background: #f2f2f2 !important; }
 
-  .feature-section {
+  #why-choose-us .feature-section {
     position: relative;
     height: 650px;
     overflow: hidden;
@@ -442,7 +442,21 @@ textarea {
     transition: box-shadow 0.3s; 
   }
 
-  .feature-section:hover {
+  #why-choose-us .feature-section:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 1);
+    transition: box-shadow 0.3s;
+  }
+
+  #section-services .feature-section {
+    position: relative;
+    overflow: hidden;
+    height: 650px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s; 
+  }
+
+  #section-services .feature-section:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 1);
     transition: box-shadow 0.3s;
   }
@@ -472,8 +486,14 @@ textarea {
     padding: inherit;
   }
 
+  @media (max-width: 1024px) {
+    #section-services .feature-section {
+      height: fit-content;
+    }
+  }
+
   @media (max-width: 768px) {
-    .feature-section {
+    #why-choose-us .feature-section {
       height: 500px;
     }
   }
@@ -1039,7 +1059,7 @@ textarea {
 }
 
 #section-services .main-highlights .highlights { 
-  height: 300px;
+  min-height: 300px;
   position: relative;
   z-index: 1;
   color: white;
